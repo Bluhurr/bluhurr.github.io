@@ -14,12 +14,16 @@
   src: url('./fonts/CozetteVector.ttf');
 }
 
-html, body {
+html {
+  height: 100%;
+  overflow: auto;
+}
+
+body {
   height: 100%;
   width: 100%;
   padding: 0px;
   margin: 0px;
-  overflow-x: hidden;
   scrollbar-color: var(--sky-blue-crayola) transparent;
 }
 
@@ -54,8 +58,20 @@ html, body {
   height: 8%;
   display: flex;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.0);
   color: white;
+  z-index: 5;
+}
+
+.nav-transparent {
+  background-color: rgba(0, 53, 73, 0.0);
+  backdrop-filter: blur(7px);
+  transition: ease 0.5s;
+}
+
+.nav-colored {
+  background-color: rgba(0, 141, 184, 0.7);
+  backdrop-filter: blur(7px);
+  transition: ease 0.5s;
 }
 
 #footer {
@@ -83,10 +99,6 @@ html, body {
   height: 100%;
   list-style: none;
   font-size: 1.5rem;
-  background-color: rgba(0, 53, 73, 0.3);
-  box-shadow: 0px 0 20px rgba(0, 0, 0, 0.35);
-  /*background-color: rgba(0, 0, 0, 0.2);*/
-  backdrop-filter: blur(7px);
 }
 
 #logo-link {
@@ -114,16 +126,23 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--nickel);
 }
 
-#hero-image-container {
-  display: flex;
-  width: 100%;
-  height: 90vh;
+#bg-image {
+  position: fixed;
+  top: 0;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
   background-image: url('./images/simon-lee-zft-W1kVEhg-unsplash.jpg');
   background-size: cover;
   background-position: center;
+}
+
+#threejs-container {
+  display: flex;
+  width: 100%;
+  height: 90vh;
   justify-content: center;
 }
 
@@ -141,6 +160,13 @@ html, body {
   font-family: arial;
   font-size: 2.5em;
   color: white;
+  cursor: pointer;
+  transition: ease 0.2s;
+}
+
+.circle-arrow:hover {
+  background-color: var(--dark-blue);
+  color: var(--sky-blue-crayola);
 }
 
 #name-header {
@@ -155,17 +181,13 @@ html, body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-image: linear-gradient(110deg,
-      var(--nickel) 0% 40%,
-      #BBBBBB 40% 50%,
-      #CCCCCC 50% 60%,
-      #FFFFFF 60% 100%
-    );
   box-sizing: border-box;
   padding: 7em;
   padding-top: 0px;
   padding-bottom: 6.5vh;
   box-shadow: 0px -30px 40px 20px rgba(0, 0, 0, 0.4);
+  background-color: white;
+  color: var(--blue);
 }
 
 #home-about-col {
@@ -179,7 +201,6 @@ html, body {
 .about-me-header {
   padding: 0px;
   margin: 0px;
-  color: white;
   font-family: Cozette;
 }
 
@@ -187,7 +208,6 @@ html, body {
   padding: 0px;
   margin-bottom: 0.5%;
   font-family: arial;
-  color: white;
 }
 
 #bottom-page-shadow {
@@ -205,7 +225,10 @@ html, body {
   flex-direction: column;
   width: 50%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+#home-page-down-arrow{
 }
 
 #abit-about-me-row {
@@ -220,6 +243,7 @@ html, body {
 #about-and-skills {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 #skills-section {
@@ -228,4 +252,10 @@ html, body {
   width: 50%;
   justify-content: center;
   align-items: center;
+}
+
+#test-section {
+  display: flex;
+  width: 100%;
+  height: 40vh;
 }

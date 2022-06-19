@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Greg Lawrence - Web Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a24d64ca4b.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="navbar">
+    <div id="navbar" class="nav-transparent">
       <ul class="nav-ul">
         <li id="logo-link"><a href='#'>&lt;Greg <span class="sky-blue-text">Lawrence</span> /&gt;</a></li>
         <li class="nav-link"><a href='#'>// Portfolio</a></li>
@@ -17,9 +18,14 @@
       </ul>
     </div>
     <div id="main-content">
-      <div id="hero-image-container">
-        <div class="circle-arrow">v</div>
+      <div id="bg-image"></div>
+
+      <div id="threejs-container">
+        <div id="main-arrow" class="circle-arrow">
+            <i id="home-page-down-arrow" class="fa-solid fa-arrow-down"></i>
+        </div>
       </div>
+
       <div id="home-about-content">
         <div id="home-about-col">
 
@@ -29,12 +35,25 @@
           
           <div id="about-and-skills">
             <div id="about-text-section">
-              <p class="about-me-p">I am a Front-End Web Developer interested and excited about creating unique website experiences using technologies like React.js and 3D libraries/tools such as Three.js or PlayCanvas.</p>
-              <p class="about-me-p">- I have hands on experience creating responsive web pages using HTML, CSS, and Javascript.</p>
-              <p class="about-me-p">- I bring experience with libraries such as Three.js or tools like PlayCanvas to help create visually creative web experiences.</p>
-              <p class="about-me-p">- I am always seeking new concepts and ideas to learn, and am always excited about working with unique and interesting projects.</p>
-              <p class="about-me-p">- Although my hands on experience with React.js is limited, I am actively learning and working on creating web apps with it and still know plenty to get my hands dirty.</p>
-              <p class="about-me-p">Whether you need a full web page or interesting Three.js/PlayCanvas addition to your current one, or even just some extra hands to help on your larger projects, I'm here to assist in all the ways I can.</p>
+              <p class="about-me-p">Greetings weary internet traveler! My name is Greg Lawrence, 
+              and as you've <i>probably</i> already figured out 
+              I am among many other things, a 
+              <b>web developer</b>.</p>
+
+              <p class="about-me-p">Apart from web development 
+              I enjoy many other activities such as <br> 
+              hiking, mountain biking, cars, music production, and 
+              plenty more. <br><br> The very astute of you <i>may</i> have also noticed my favorite
+              color happens to be <b>blue</b>.</p>
+
+              <p class="about-me-p">I have always loved learning
+              new skills of all types, but that has of course also
+              spilled over into my programming career as well.</p> 
+
+              <p class="about-me-p">Whether it be learning
+              simple concepts such as <b>new CSS styling techniques</b>, learning JavaScript
+              libraries such as <b>React.js</b> and <b>Three.js</b>, or even learning new <b>Vim keybindings</b>
+              I have always sought out the unique and interesting in life, allowing me to in turn create equally unique websites and web applications.</p>
             </div>
             <div id="skills-section">
               <ul>
@@ -52,6 +71,7 @@
     
     <div id="bottom-page-shadow"></div>
 
+    <div id="test-section"></div>
     <div id="footer"></div>
     <script src="home.js"></script>
   </body>
