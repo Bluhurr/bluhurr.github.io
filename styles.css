@@ -136,7 +136,7 @@ body {
   height: 100vh;
   background-image: url('./images/simon-lee-zft-W1kVEhg-unsplash.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 }
 
 #threejs-container {
