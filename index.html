@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Greg Lawrence - Web Developer</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <script src="https://kit.fontawesome.com/a24d64ca4b.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="navbar" class="nav-transparent">
       <ul class="nav-ul">
-        <li id="logo-link"><a href='#'>&lt;Greg <span class="sky-blue-text">Lawrence</span> /&gt;</a></li>
-        <li class="nav-link"><a href='#'>// Portfolio</a></li>
-        <li class="nav-link"><a href='#'>// About Me</a></li>
-        <li class="nav-link"><a href='#'>// Say Hi!</a></li>
+        <li id="logo-link"><a href='#Home'>&lt;Greg <span class="sky-blue-text">Lawrence</span> /&gt;</a></li>
+        <li class="nav-link"><a href='#Portfolio'>// Portfolio</a></li>
+        <li class="nav-link"><a href='#About Me'>// About Me</a></li>
+        <li class="nav-link"><a href='#Contact'>// Say Hi!</a></li>
       </ul>
     </div>
     <div id="main-content">
       <div id="bg-image"></div>
 
       <div id="threejs-container">
+        <div id="threejs"></div>
         <div id="main-arrow" class="circle-arrow">
             <i id="home-page-down-arrow" class="fa-solid fa-arrow-down"></i>
         </div>
@@ -56,11 +57,8 @@
               I have always sought out the unique and interesting in life, allowing me to in turn create equally unique websites and web applications.</p>
             </div>
             <div id="skills-section">
-              <ul>
-                <li>Skill 1</li>
-                <li>Skill 2</li>
-                <li>Skill 3</li>
-                <li>Skill 4</li>
+              <h3 id="skills-header">Primary Skills</h3>
+              <ul id="skills-list">
               </ul>
             </div>
           </div>
@@ -73,6 +71,8 @@
 
     <div id="test-section"></div>
     <div id="footer"></div>
-    <script src="home.js"></script>
+    <script src="js/three.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/home-three.js"></script>
   </body>
 </html>
