@@ -151,7 +151,7 @@ body {
   height: 100%;
   position: fixed;
   object-fit: cover;
-  z-index: -1;
+  margin-top: -5%;
 }
 
 .circle-arrow {
@@ -199,6 +199,7 @@ body {
   box-shadow: 0px -30px 40px 20px rgba(0, 0, 0, 0.4);
   background-color: white;
   color: var(--blue);
+  z-index: 1;
 }
 
 #home-about-col {
