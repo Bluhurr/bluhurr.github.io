@@ -67,6 +67,9 @@ function loadScene1() {
   camera.position.y = y;
   controls = new THREE.OrbitControls(camera, renderer.domElement)
   controls.target = new THREE.Vector3(objects[0].position.x, objects[0].position.y-0.5, objects[0].position.z)
+  if(onMobile){
+   controls.enabled = false; 
+  }
 }
 
 function loadScene2() {
@@ -80,6 +83,9 @@ function loadScene2() {
   camera.position.z = z;
   controls = new THREE.OrbitControls(camera, renderer.domElement)
   controls.target = new THREE.Vector3(controls.target.x, controls.target.y-5, controls.target.z)
+  if(onMobile){
+   controls.enabled = false; 
+  }
 }
 
 function addCubeGrid(gridSize) {
