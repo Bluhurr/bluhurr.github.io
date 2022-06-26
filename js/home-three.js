@@ -69,6 +69,7 @@ function loadScene1() {
   controls.target = new THREE.Vector3(objects[0].position.x, objects[0].position.y-0.5, objects[0].position.z)
   if(onMobile){
    controls.enabled = false; 
+   renderer.domElement.setAttribute("style","touch-action: auto");
   }
 }
 
@@ -85,6 +86,7 @@ function loadScene2() {
   controls.target = new THREE.Vector3(controls.target.x, controls.target.y-5, controls.target.z)
   if(onMobile){
    controls.enabled = false; 
+   renderer.domElement.setAttribute("style","touch-action: auto");
   }
 }
 
