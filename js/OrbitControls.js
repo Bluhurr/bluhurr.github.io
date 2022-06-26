@@ -561,7 +561,6 @@
 				if ( needsUpdate ) {
 
 					// prevent the browser from scrolling on cursor keys
-					event.preventDefault();
 					scope.update();
 
 				}
@@ -870,7 +869,6 @@
 			function onMouseWheel( event ) {
 
 				if ( scope.enabled === false || scope.enableZoom === false || state !== STATE.NONE ) return;
-				event.preventDefault();
 				scope.dispatchEvent( _startEvent );
 				handleMouseWheel( event );
 				scope.dispatchEvent( _endEvent );
