@@ -9,6 +9,7 @@ let renderer = null;
 let camera = null;
 let controls = null;
 let antialiasOn = false;
+let scrolledEnough = false;
 
 window.mobileCheck = function() {
   let check = false;
@@ -40,6 +41,9 @@ function init() {
       animate();
       break;
   }
+
+  window.addEventListener('scroll', onScroll, false);
+  onScroll();
 }
 
 function minSceneSetup() {
@@ -111,9 +115,20 @@ function addCubeGrid(gridSize) {
 }
 
 function onWindowResize(){
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize( window.innerWidth, window.innerHeight );
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+}
+
+function onScroll() {
+  var scrollDist = document.documentElement.scrollTop;
+  if(scrollDist >= 700){
+    var canvas = renderer.domElement;
+    canvas.style.visibility = "hidden";
+  }else if(scrollDist < 700){
+    var canvas = renderer.domElement;
+    canvas.style.visibility = "visible";
+  }
 }
 
 function generateRandomInteger(max) {
