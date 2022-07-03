@@ -8,6 +8,7 @@ downArrow.addEventListener('click', (e)=>{
 });
 
 const myNav = document.getElementById('navbar');
+const bgImage = document.getElementById('bg-image');
 
 window.onscroll = () => {
   "use strict";
@@ -17,5 +18,11 @@ window.onscroll = () => {
   }else{
     myNav.classList.add("nav-transparent");
     myNav.classList.remove("nav-colored");
+  }
+
+  if(document.documentElement.scrollTop >= 700){
+    bgImage.style.filter = 'brightness(1)';
+  }else if(document.documentElement.scrollTop < 700){
+    bgImage.style.filter = 'brightness(1)';
   }
 };

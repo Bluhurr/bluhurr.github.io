@@ -124,10 +124,14 @@ function onScroll() {
   var scrollDist = document.documentElement.scrollTop;
   if(scrollDist >= 700){
     var canvas = renderer.domElement;
+    var iconCanvas = document.getElementById('three-icons-canvas-container');
     canvas.style.visibility = "hidden";
+    iconCanvas.style.visibility = "visible";
   }else if(scrollDist < 700){
     var canvas = renderer.domElement;
+    var iconCanvas = document.getElementById('three-icons-canvas-container');
     canvas.style.visibility = "visible";
+    iconCanvas.style.visibility = "hidden";
   }
 }
 
