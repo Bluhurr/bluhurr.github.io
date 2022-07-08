@@ -10,6 +10,9 @@ let camera = null;
 let controls = null;
 let antialiasOn = false;
 let scrolledEnough = false;
+let af;
+let paused = false;
+let rendering = false;
 
 window.mobileCheck = function() {
   let check = false;
@@ -121,17 +124,28 @@ function onWindowResize(){
 }
 
 function onScroll() {
-  var scrollDist = document.documentElement.scrollTop;
-  if(scrollDist >= 700){
+  var scrollPercent = getScrollPercent(); 
+  var limit = 60;
+  if(scrollPercent >= limit){
+    // We also probably want to pause each threejs renderer
+    // so that we don't waste performance on 2 renderers
     var canvas = renderer.domElement;
     var iconCanvas = document.getElementById('three-icons-canvas-container');
-    canvas.style.visibility = "hidden";
-    iconCanvas.style.visibility = "visible";
-  }else if(scrollDist < 700){
+    canvas.style.opacity = 0;
+    iconCanvas.style.opacity = 1;
+    iconCanvas.style.filter = 'blur(0px)';
+    paused = true;
+    rendering = false;
+  }else if(scrollPercent < limit){
     var canvas = renderer.domElement;
     var iconCanvas = document.getElementById('three-icons-canvas-container');
-    canvas.style.visibility = "visible";
-    iconCanvas.style.visibility = "hidden";
+    canvas.style.opacity = 1;
+    iconCanvas.style.opacity = 0;
+    iconCanvas.style.filter = 'blur(10px)';
+    paused = false;
+    if(!rendering){
+      animate();
+    }
   }
 }
 
@@ -140,7 +154,9 @@ function generateRandomInteger(max) {
 }
 
 function animate(dt) {
-  requestAnimationFrame( animate );
+  if(paused){ return; }
+  rendering = true;
+  af = requestAnimationFrame( animate );
   delta = clock.getDelta();
 
   if(sceneNum == 1){
@@ -198,4 +214,12 @@ function torusKnot(size, thickness, twists1, twists2) {
   objects.push(tKnot);
 
   return tKnot;
+}
+
+function getScrollPercent() {
+  var h = document.documentElement, 
+      b = document.body,
+      st = 'scrollTop',
+      sh = 'scrollHeight';
+  return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
 }

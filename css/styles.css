@@ -20,7 +20,6 @@ html {
 }
 
 body {
-  height: 100%;
   width: 100%;
   padding: 0px;
   margin: 0px;
@@ -55,34 +54,35 @@ body {
 #navbar {
   position: fixed;
   width: 100%;
-  height: 8%;
+  height: 8vh;
   display: flex;
   flex-direction: column;
   color: white;
   z-index: 5;
+  top: 0;
 }
 
 .nav-transparent {
   background-color: rgba(0, 53, 73, 0.0);
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(20px);
   transition: ease 0.5s;
 }
 
 .nav-colored {
-  background-color: rgba(0, 141, 184, 0.7);
-  backdrop-filter: blur(7px);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
   transition: ease 0.5s;
 }
 
 #footer {
   width: 100%;
-  height: 7%;
+  height: 8vh;
   display: flex;
   flex-direction: row;
   background-color: white;
   color: rgba(0, 0, 0, 0.35);
   font-family: arial;
-  font-size: 0.75rem;
+  font-size: 1.5vmin;
   padding: 1%;
   box-sizing: border-box;
   cursor: pointer;
@@ -112,7 +112,7 @@ body {
 }
 
 .left-footer-col i {
-  font-size: 1.75rem;
+  font-size: 2.5vmin;
 }
 
 .right-footer-col a {
@@ -138,7 +138,7 @@ body {
   width: 100%;
   height: 100%;
   list-style: none;
-  font-size: 2vw;
+  font-size: 3vmin;
 }
 
 #logo-link {
@@ -162,6 +162,8 @@ body {
 
 #main-content {
   width: 100%;
+  min-height: 84vh;
+  margin-top: 8vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -182,7 +184,7 @@ body {
 #threejs-container {
   display: flex;
   width: 100%;
-  height: 90vh;
+  height: 82vh;
   justify-content: center;
 }
 
@@ -193,19 +195,24 @@ body {
   object-fit: cover;
 }
 
+#threejs canvas {
+  margin-top: -8vh;
+  transition: 0.3s ease;
+}
+
 .circle-arrow {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: -0.35in; 
+  margin-bottom: -4vmin; 
   z-index: 2;
-  width: 0.75in;
-  height: 0.75in;
+  width: 8vmin;
+  height: 8vmin;
   border-radius: 50%;
   background-color: var(--sky-blue-crayola);
   align-self: flex-end;
   font-family: arial;
-  font-size: 2.5em;
+  font-size: 4vmin;
   color: white;
   cursor: pointer;
   transition: ease 0.2s;
@@ -250,14 +257,15 @@ body {
 }
 
 .about-me-header {
-  padding: 0px;
   margin: 0px;
+  margin-top: 0px;
   font-family: Cozette;
   background-color: var(--blue);
   padding: 1.5%;
   color: white;
   margin-top: 3%;
   align-self: end;
+  font-size: 2.5vmin;
 }
 
 #skills-header {
@@ -272,7 +280,7 @@ body {
   padding: 0px;
   margin-bottom: 0.5%;
   font-family: arial;
-  font-size: 1.1rem;
+  font-size: 2vmin;
 }
 
 #bottom-page-shadow {
@@ -294,7 +302,7 @@ body {
 }
 
 #about-icon {
-  font-size: 2rem;
+  font-size: 4vmin;
 }
 
 
@@ -317,6 +325,7 @@ body {
   flex-direction: row;
   width: 100%;
   height: 100%;
+  margin-top: 5%;
 }
 
 #skills-section {
@@ -325,9 +334,9 @@ body {
   width: 50%;
   justify-content: center;
   align-items: center;
-  margin-right: -5%;
   margin-left: auto;
-  margin-top: 5%;
+  box-sizing: border-box;
+  padding-left: 6vw;
 }
 
 #three-icons-section {
@@ -369,6 +378,8 @@ body {
   height: 100vh;
   position: fixed;
   top: 0;
+  filter: blur(10px);
+  transition: 0.3s ease;
 }
 
 .three-icon-col {
@@ -410,7 +421,9 @@ body {
   top: 0;
   z-index: -1;
   pointer-events: none;
-  visibility: hidden;
+  opacity: 0;
+  filter: blur(10px);
+  transition: 1s ease;
 }
 
 @media only screen and (max-width: 600px) {
@@ -439,6 +452,7 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 0px;
   }
   #footer i {
     display: none;
