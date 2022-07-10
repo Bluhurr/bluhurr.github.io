@@ -51,7 +51,6 @@ function minSceneSetup2() {
     alpha: true,
     antialias: antialiasOn2,
     precision: 'lowp',
-    powerPreference: 'low-power',
   });
 }
 
@@ -157,7 +156,6 @@ function updateSize() {
 
 function render() {
   updateSize();
-  //canvas.style.transform = `translateY(${window.scrollY}px`;
   connectScenesToElements();
 }
 

@@ -56,9 +56,6 @@ function minSceneSetup() {
   camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
   renderer = new THREE.WebGLRenderer({
     alpha: true,
-    antialias: antialiasOn,
-    precision: 'lowp',
-    powerPreference: 'low-power',
   });
   renderer.setSize( window.innerWidth, window.innerHeight );
   document.getElementById('threejs').appendChild( renderer.domElement );
@@ -74,6 +71,11 @@ function loadScene1() {
   camera.position.y = y;
   controls = new THREE.OrbitControls(camera, renderer.domElement)
   controls.target = new THREE.Vector3(objects[0].position.x, objects[0].position.y-0.5, objects[0].position.z)
+  controls.autoRotate = true;
+  controls.enableZoom = false;
+  controls.enablePan = false;
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05;
   if(onMobile){
    controls.enabled = false; 
    renderer.domElement.setAttribute("style","touch-action: auto");
@@ -91,6 +93,11 @@ function loadScene2() {
   camera.position.z = z;
   controls = new THREE.OrbitControls(camera, renderer.domElement)
   controls.target = new THREE.Vector3(controls.target.x, controls.target.y-5, controls.target.z)
+  controls.autoRotate = true;
+  controls.enableZoom = false;
+  controls.enablePan = false;
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.05;
   if(onMobile){
    controls.enabled = false; 
    renderer.domElement.setAttribute("style","touch-action: auto");
@@ -100,7 +107,7 @@ function loadScene2() {
 function addCubeGrid(gridSize) {
   var boxSize = 0.5;
   const geometry = new THREE.BoxGeometry(boxSize, boxSize, boxSize);
-  const material = new THREE.MeshPhysicalMaterial({ color: 0x16d9f3 });
+  const material = new THREE.MeshLambertMaterial({ color: 0x16d9f3 });
   material.reflectivity = 1;
   material.transmission = 0;
   material.roughness = 0.3;
@@ -126,25 +133,23 @@ function onWindowResize(){
 function onScroll() {
   var scrollPercent = getScrollPercent(); 
   var limit = 60;
-  if(scrollPercent >= limit){
+  if(scrollPercent >= limit && !scrolledEnough){
+    scrolledEnough = true;
     // We also probably want to pause each threejs renderer
     // so that we don't waste performance on 2 renderers
     var canvas = renderer.domElement;
     var iconCanvas = document.getElementById('three-icons-canvas-container');
     canvas.style.opacity = 0;
     iconCanvas.style.opacity = 1;
-    iconCanvas.style.filter = 'blur(0px)';
-    paused = true;
-    rendering = false;
-  }else if(scrollPercent < limit){
+  }else if(scrollPercent < limit && scrolledEnough){
+    scrolledEnough = false;
     var canvas = renderer.domElement;
     var iconCanvas = document.getElementById('three-icons-canvas-container');
     canvas.style.opacity = 1;
     iconCanvas.style.opacity = 0;
-    iconCanvas.style.filter = 'blur(10px)';
-    paused = false;
     if(!rendering){
       animate();
+      rendering = true;
     }
   }
 }
@@ -154,27 +159,25 @@ function generateRandomInteger(max) {
 }
 
 function animate(dt) {
-  if(paused){ return; }
-  rendering = true;
-  af = requestAnimationFrame( animate );
-  delta = clock.getDelta();
+  if(scrolledEnough){ 
+    paused = true;
+    rendering = false;
+    return;
+  }
 
   if(sceneNum == 1){
-    objects[0].rotation.x += 0.5 * delta;
-    objects[0].rotation.y += 0.5 * delta;
+    delta = clock.getDelta();
+    objects[0].rotation.x += 0.3 * delta;
+    objects[0].rotation.y += 0.3 * delta;
   }else if(sceneNum == 2){
     for(var i=0; i < objects.length; i++){
       objects[i].position.y = 0.7 *  Math.cos((0.002)*(dt - 248*i));
     }
   }
-  controls.autoRotate = true;
-  controls.enableZoom = false;
-  controls.enablePan = false;
-  controls.enableDamping = true;
-  controls.dampingFactor = 0.05;
-  controls.update();
 
+  controls.update();
   renderer.render( scene, camera );
+  af = requestAnimationFrame( animate );
 };
 
 function addObjects() {

@@ -197,7 +197,6 @@ body {
 
 #threejs canvas {
   margin-top: -8vh;
-  transition: 0.3s ease;
 }
 
 .circle-arrow {
@@ -373,15 +372,6 @@ body {
   position: absolute;
 }
 
-#three-icons-section canvas {
-  width: 100vw; 
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  filter: blur(10px);
-  transition: 0.3s ease;
-}
-
 .three-icon-col {
   width: 100%;
   height: 100%;
@@ -422,8 +412,6 @@ body {
   z-index: -1;
   pointer-events: none;
   opacity: 0;
-  filter: blur(10px);
-  transition: 1s ease;
 }
 
 @media only screen and (max-width: 600px) {
