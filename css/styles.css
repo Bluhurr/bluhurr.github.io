@@ -265,6 +265,7 @@ body {
   margin-top: 3%;
   align-self: end;
   font-size: 2.5vmin;
+  border-radius: 20px 20px 20px 0px;
 }
 
 #skills-header {
@@ -317,6 +318,8 @@ body {
   align-items: center;
   margin-top: 0px;
   margin-bottom: 0px;
+  padding-bottom: 0.5%;
+  box-sizing: border-box;
 }
 
 #about-and-skills {
@@ -363,6 +366,7 @@ body {
   height: 50vmin;
   border: solid 15px var(--blue);
   box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
 }
 
 .header-line-break {
