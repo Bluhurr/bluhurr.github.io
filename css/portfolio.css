@@ -20,9 +20,20 @@
   justify-content: center;
   width: 100%;
   padding: 7.5%;
-  padding-top: 5%;
+  padding-top: 3.5%;
   padding-bottom: 0px;
   box-sizing: border-box;
+}
+
+.p-note {
+  font-size: 1.5vmin;
+  color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 0px !important;
+}
+
+hr {
+  width: 100%;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .portfolio-item {
@@ -31,7 +42,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 8%;
+  margin-bottom: 6%;
 }
 
 .portfolio-card {
@@ -65,6 +76,10 @@
   margin-bottom: 2%;
 }
 
+.title-des > p {
+  margin-block: 3%;
+}
+
 .portfolio-card-images {
   display: flex;
   flex-direction: column;
@@ -86,6 +101,7 @@
   font-family: "Cozette";
   font-weight: bold;
   text-decoration: underline;
+  margin-bottom: 2%;
 }
 
 #tripster-title {
@@ -150,13 +166,21 @@
   align-items: center;
   color: white;
   font-family: arial;
-  margin-left: auto;
-  margin-right: 0px;
-  font-size: 2vmin;
+  font-size: 2.5vmin;
   font-weight: bold;
   padding-left: 2%;
   padding-right: 2%;
   box-sizing: border-box;
+}
+
+.date-left {
+  margin-left: auto;
+  margin-right: 0px;
+}
+
+.date-right {
+  margin-right: auto;
+  margin-left: 0px;
 }
 
 .portfolio-card-arrow {
@@ -172,7 +196,6 @@
   border-radius: 100%;
   transition: 0.5s ease;
   cursor: pointer;
-  margin-top: auto;
   margin-bottom: auto;
 }
 
