@@ -38,9 +38,6 @@ function setupEventHandlers() {
   pCard2Arrow.addEventListener('click', ()=>{
     changeCardImages(pCard2Images);
   }, false);
-  pCard3Arrow.addEventListener('click', ()=>{
-    changeCardImages(pCard3Images);
-  }, false);
 }
 
 function changeCardImages(imgContainer) {
