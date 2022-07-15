@@ -13,10 +13,25 @@
     <!-- Nav -->
     <div id="navbar" class="nav-transparent">
       <ul class="nav-ul">
+        <li id="logo-link"><a href='./'>&lt;Greg <span class="sky-blue-text">Lawrence</span> /&gt;</a></li>
+        <li class="nav-link"><a href='portfolio.html'>// Portfolio</a></li>
+        <li class="nav-link"><a href='aboutme.html'>// About Me</a></li>
+        <li class="nav-link"><a href='contact.html'>// Say Hi!</a></li>
+      </ul>
+
+      <!-- Mobile Nav -->
+      <div class="hamburger">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </div>
+      <ul class="mobile-nav-ul">
         <li id="logo-link"><a href='../'>&lt;Greg <span class="sky-blue-text">Lawrence</span> /&gt;</a></li>
-        <li class="nav-link"><a href='./portfolio.html'>// Portfolio</a></li>
-        <li class="nav-link"><a href='./aboutme.html'>// About Me</a></li>
-        <li class="nav-link"><a href='./contact.html'>// Say Hi!</a></li>
+        <div class="mobile-nav-link-container">
+          <li class="nav-link"><a href='portfolio.html'>// Portfolio</a></li>
+          <li class="nav-link"><a href='aboutme.html'>// About Me</a></li>
+          <li class="nav-link"><a href='contact.html'>// Say Hi!</a></li>
+        </div>
       </ul>
     </div>
 
@@ -45,5 +60,6 @@
     <!-- Threejs and other scripts -->
     <script src="../js/three.js"></script>
     <script type="module" src="../js/contact.js"></script>
+    <script type="module" src="../js/hamburger.js"></script>
   </body>
 </html>
