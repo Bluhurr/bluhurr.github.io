@@ -1,11 +1,161 @@
-#test {
-  height: 140vh;
+#main-content {
+  height: 84vh;
+}
+
+.about-me-page-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
   width: 100%;
+  overflow: auto;
+  padding: 2%;
+  box-sizing: border-box;
+}
+
+.about-me-info-column {
   display: flex;
   flex-direction: column;
+  width: 50%;
+}
+
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-block: 0%;
+  box-sizing: border-box;
+  align-items: center;
+  padding-left: 2%;
+  height: fit-content;
+  min-height: 100%;
+}
+
+.skills-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 50%;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+
+.other-skills-row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 3%;
+  padding-inline: 4%;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
   justify-content: center;
   align-items: center;
+  flex: 1;
+}
+
+.other-skills-column {
   color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+  width: 30%;
+  font-size: 1.5em;
+  margin: 0px;
+}
+
+.other-skills-column > li {
+  margin-block: 0.5em;
+}
+
+.about-page-skills-list {
+  width: 30%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  margin-inline: 2%;
+  padding: 3%;
+  padding-inline: 4%;
+  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-page-skills-list > li {
+  color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 2vmin;
+  margin-block: 7%;
+  text-align: left;
+  margin-left: 15%;
+  margin-right: auto;
+  width: 80%;
+}
+
+.about-profile-pic-section {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+#about-me-profile-pic {
+  height: 90%;
+  width: auto;
+  border-radius: 10%;
+  background: grey;
+}
+
+.about-info-text-section {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: #ffffffaa;
+  backdrop-filter: blur(20px);
+  border-radius: 0px 40px 40px 40px;
+  padding: 6%;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  padding-block: 3%;
+}
+
+.about-info-text-p {
+  font-size: 2vmin;
+  color: #046;
   font-family: arial;
-  font-size: 2rem;
+}
+
+.skills-column > h2 {
+  color: white;
+  font-size: 3vmin;
+  font-family: "Cozette";
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 2%;
+  text-shadow: 2.5px 2.5px var(--dark-blue);
+  margin-inline: auto;
+  width: auto;
+  text-align: center;
+  margin-top: 0px;
+}
+
+#other-skills-header {
+  margin-top: 0px;
+}
+
+.about-page-skills-list > h3 {
+  color: white;
+  font-family: 'Trebuchet MS', sans-serif;
+  margin-top: 0px;
+  margin-bottom: 5%;
+  font-size: 1em;
+  text-align: left;
+}
+
+.about-page-skills-list > hr {
+  border-top: solid 5px white;
+  margin-top: 0px;
+  margin-bottom: 7%;
 }
