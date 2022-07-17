@@ -1,67 +1,67 @@
 #main-content {
-  height: 84vh;
 }
 
 .about-me-page-container {
   display: flex;
-  flex-direction: row;
-  height: 100%;
+  flex-direction: column;
   width: 100%;
   overflow: auto;
   padding: 2%;
+  padding-bottom: 4%;
   box-sizing: border-box;
+  align-items: center;
 }
 
 .about-me-info-column {
   display: flex;
-  flex-direction: column;
-  width: 50%;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .skills-column {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   padding-block: 0%;
   box-sizing: border-box;
   align-items: center;
-  padding-left: 2%;
   height: fit-content;
   min-height: 100%;
+  margin-top: 5%;
 }
 
 .skills-row {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 50%;
   justify-content: center;
   margin-bottom: 3%;
 }
 
 .other-skills-row {
-  width: 100%;
+  width: 70%;
   height: 100%;
   display: flex;
   flex-direction: row;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   box-sizing: border-box;
-  text-align: center;
   padding: 3%;
   padding-inline: 4%;
   box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
   justify-content: center;
-  align-items: center;
-  flex: 1;
+  backdrop-filter: blur(10px);
 }
 
 .other-skills-column {
   color: white;
   font-family: 'Trebuchet MS', sans-serif;
-  width: 30%;
-  font-size: 1.5em;
+  font-size: 2em;
   margin: 0px;
+  margin-inline: 10%;
+  padding: 0px;
 }
 
 .other-skills-column > li {
@@ -75,16 +75,17 @@
   box-sizing: border-box;
   text-align: center;
   margin-inline: 2%;
-  padding: 3%;
-  padding-inline: 4%;
+  padding: 2%;
+  padding-inline: 3%;
   box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
 }
 
 .about-page-skills-list > li {
   color: white;
   font-family: 'Trebuchet MS', sans-serif;
-  font-size: 2vmin;
-  margin-block: 7%;
+  font-size: 3vmin;
+  margin-block: 4%;
   text-align: left;
   margin-left: 15%;
   margin-right: auto;
@@ -92,23 +93,23 @@
 }
 
 .about-profile-pic-section {
-  height: 40%;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: start;
-  align-items: center;
+  align-items: start;
+  flex: 2;
+  padding-inline: 2%;
 }
 
 #about-me-profile-pic {
-  height: 90%;
-  width: auto;
+  height: auto;
+  width: 100%;
   border-radius: 10%;
   background: grey;
 }
 
 .about-info-text-section {
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -119,20 +120,24 @@
   box-sizing: border-box;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   padding-block: 3%;
+  justify-content: center;
+  align-items: center;
+  flex: 9;
+  margin-inline: 2%;
+  margin-top: 0.5%;
 }
 
 .about-info-text-p {
-  font-size: 2vmin;
+  font-size: 1.1em;
   color: #046;
   font-family: arial;
 }
 
 .skills-column > h2 {
   color: white;
-  font-size: 3vmin;
+  font-size: 3em;
   font-family: "Cozette";
   font-weight: bold;
-  text-decoration: underline;
   margin-bottom: 2%;
   text-shadow: 2.5px 2.5px var(--dark-blue);
   margin-inline: auto;
@@ -143,6 +148,16 @@
 
 #other-skills-header {
   margin-top: 0px;
+  font-size: 2.5em;
+}
+
+#small-other-skills-header {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: 0.7em;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .about-page-skills-list > h3 {
@@ -150,7 +165,7 @@
   font-family: 'Trebuchet MS', sans-serif;
   margin-top: 0px;
   margin-bottom: 5%;
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: left;
 }
 
@@ -158,4 +173,114 @@
   border-top: solid 5px white;
   margin-top: 0px;
   margin-bottom: 7%;
+}
+
+@media only screen and (max-width: 600px) {
+  .skills-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 9%;
+    align-items: center;
+  }
+
+  .about-page-skills-list {
+    width: 100%;
+    padding-inline: 7%;
+    padding-block: 5%;
+  }
+
+  .about-me-info-column {
+    flex-direction: column;
+  }
+
+  .about-me-page-container {
+    padding-inline: 5%;
+    padding-block: 10%;
+  }
+
+  .about-profile-pic-section {
+    padding-inline: 20%;
+    box-sizing: border-box;
+    margin-bottom: 5%;
+  }
+
+  #about-me-profile-pic {
+    border-radius: 50%;
+  }
+
+  .about-info-text-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 15px;
+    padding: 6%;
+    box-sizing: border-box;
+    justify-content: center;
+    padding-inline: 10%;
+    overflow-y: scroll;
+    height: 25vh;
+    scrollbar-width: none;
+    box-shadow: inset 0px -10px 20px -10px #000;
+    scroll-padding-bottom: 20%;
+    margin: 0px;
+    flex: unset;
+  }
+
+  .about-info-text-p:after {
+    content: "";
+    height: 17%;
+    display: flex;
+  }
+
+  .about-info-text-p {
+    font-size: 1.1em;
+    color: #046;
+    font-family: arial;
+    margin-bottom: 5%;
+    margin-block: 0px;
+    height: 100%;
+  }
+
+  .skills-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-block: 0%;
+    align-items: center;
+    height: fit-content;
+    min-height: 100%;
+    margin-top: 10%;
+    padding-inline: 0%;
+    box-sizing: border-box;
+  }
+
+  .skills-column > h2 {
+    font-size: 2em;
+  }
+
+  .about-page-skills-list > li {
+    font-size: 1.5em;
+    margin-left: 15%;
+  }
+
+  #other-skills-header {
+    font-size: 1.75em;
+  }
+
+  #small-other-skills-header {
+    font-size: 0.5em;
+  }
+
+  .other-skills-row {
+    width: 100%;
+    align-items: center;
+  }
+
+  .other-skills-column {
+    font-size: 1.2em;
+    margin-inline: 7%;
+  }
 }
