@@ -301,10 +301,6 @@ hr {
     padding-inline: 3%;
   }
 
-  .portfolio-item:last-child {
-    display: none;
-  }
-
   .portfolio-card-date {
     font-size: 1em;
     line-height: 0.5;

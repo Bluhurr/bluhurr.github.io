@@ -1,11 +1,239 @@
-#test {
-  height: 140vh;
-  width: 100%;
+#main-content {
+  padding: 2em;
+  box-sizing: border-box;
+}
+
+#form-container {
+  width: 80%;
+  box-sizing: border-box;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-family: arial;
-  font-size: 2rem;
+  background: #fff7;
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 1em;
+  max-width: 50vw;
+  padding: 1.5em;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-input-field {
+  padding: 0.75em;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  border: solid 2px transparent;
+  box-shadow: 0px 5px 5px #0002;
+  width: 100%;
+}
+
+#contact-first-last {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+}
+
+.name-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+#fname-col {
+  padding-right: 2.5%;
+}
+
+#lname-col {
+  padding-left: 2.5%;
+}
+
+#email-row {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: center;
+  margin-top: 3%;
+  box-sizing: border-box;
+}
+
+#email-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#fname-label {
+}
+
+#lname-label {
+}
+
+#email-label {
+}
+
+#fname-input {
+}
+
+#lname-input {
+}
+
+#email-input {
+  padding: 0.75em;
+}
+
+#contact-message {
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  border: solid 2px transparent;
+  font-family: "Trebuchet MS", sans-serif;
+  resize: vertical;
+}
+
+#contact-message:focus {
+  border: solid 2px var(--mid-blue);
+}
+
+#contact-submit {
+  border: none;
+  border-radius: 10px;
+  padding: 1.5%;
+  padding-inline: 4%;
+  box-sizing: border-box;
+  margin-top: 2em;
+  cursor: pointer;
+}
+
+#contact-message-col {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  flex: 0.5;
+}
+
+.contact-input-field:focus {
+  border: solid 2px var(--mid-blue);
+}
+
+.input-labels {
+  margin-bottom: 1%;
+  color: #046;
+  font-family: "Trebuchet MS", sans-serif;
+  margin-left: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  #main-content {
+    padding: 1em;
+    padding-top: 1.5em;
+    box-sizing: border-box;
+    padding-bottom: 5vh;
+  }
+
+  #contact-first-last {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #fname-col {
+    padding-right: 0%;
+  }
+
+  #lname-col {
+    padding-left: 0%;
+  }
+
+  #email-row {
+    margin-top: 0%;
+    flex: 0.2;
+    width: 90%;
+  }
+
+  .contact-input-field {
+    padding: 0.75em;
+  }
+
+  #email-input {
+    padding: 0.75em;
+  } 
+
+  #contact-message-col {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    flex: 0.2;
+    height: 20%;
+  }
+
+  #contact-message {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    height: 10em;
+  }
+
+  #contact-submit {
+    border: none;
+    border-radius: 10px;
+    padding: 3%;
+    padding-inline: 10%;
+    box-sizing: border-box;
+    margin-top: 1em;
+    cursor: pointer;
+    background: white;
+  }
+
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #form-container {
+    width: 100%;
+    padding-block: 5%;
+    max-width: unset;
+    padding-inline: 2%;
+    flex: 0;
+  }
+
+  .name-col {
+    margin-bottom: 5%;
+  }
+
+  #contact-first-last {
+    flex: 0.1;
+    width: 90%;
+  }
 }
