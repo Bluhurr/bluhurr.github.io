@@ -16,7 +16,7 @@
   border-radius: 25px;
   font-family: "Trebuchet MS", sans-serif;
   font-weight: bold;
-  font-size: 1em;
+  font-size: 2vmin;
   max-width: 50vw;
   padding: 1.5em;
 }
@@ -39,6 +39,8 @@
   border: solid 2px transparent;
   box-shadow: 0px 5px 5px #0002;
   width: 100%;
+  font-size: 1.5vmin;
+
 }
 
 #contact-first-last {
@@ -108,6 +110,7 @@
   border: solid 2px transparent;
   font-family: "Trebuchet MS", sans-serif;
   resize: vertical;
+  font-size: 1.5vmin;
 }
 
 #contact-message:focus {
@@ -122,6 +125,7 @@
   box-sizing: border-box;
   margin-top: 2em;
   cursor: pointer;
+  font-size: 1.5vmin;
 }
 
 #contact-message-col {
@@ -143,12 +147,13 @@
   margin-left: 1em;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   #main-content {
     padding: 1em;
-    padding-top: 1.5em;
+    padding-top: 5vh;
     box-sizing: border-box;
-    padding-bottom: 5vh;
+    padding-bottom: 1em;
+    justify-content: flex-start;
   }
 
   #contact-first-last {
@@ -174,6 +179,7 @@
 
   .contact-input-field {
     padding: 0.75em;
+    font-size: 1em;
   }
 
   #email-input {
@@ -196,7 +202,8 @@
     box-sizing: border-box;
     border-radius: 10px;
     border: solid 2px transparent;
-    height: 10em;
+    height: 9em;
+    font-size: 1em;
   }
 
   #contact-submit {
@@ -208,6 +215,7 @@
     margin-top: 1em;
     cursor: pointer;
     background: white;
+    font-size: 1em;
   }
 
   #contact-form {
@@ -226,6 +234,7 @@
     max-width: unset;
     padding-inline: 2%;
     flex: 0;
+    font-size: 1em;
   }
 
   .name-col {
@@ -235,5 +244,12 @@
   #contact-first-last {
     flex: 0.1;
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  #form-container {
+    max-width: 90vmin;
+    width: 100%;
   }
 }

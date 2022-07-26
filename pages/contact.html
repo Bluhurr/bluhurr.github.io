@@ -39,16 +39,16 @@
     <div id="main-content">
       <div id="bg-image"></div>
       <div id="form-container">
-        <form id="contact-form" action="" method="">
+        <form id="contact-form" mode="test" class="kwes-form" action="https://kwesforms.com/api/foreign/forms/UXBzdl9iSO4AkoeOH6H0">
           <div id="contact-first-last">
             <div id="fname-col" class="name-col">
-              <label id="fname-label" class="input-labels" for="fname">First Name</label>
-              <input type="text" class="contact-input-field" id="fname-input" name="firstname" placeholder="First Name...">
+              <label id="fname-label" class="input-labels" for="fname" rules="required|max:255">First Name</label>
+              <input rules="max:255" type="text" class="contact-input-field" id="fname-input" name="firstname" placeholder="First Name...">
             </div>
 
             <div id="lname-col" class="name-col">
               <label id="lname-label" class="input-labels" for="lname">Last Name</label>
-              <input type="text" class="contact-input-field" id="lname-input" name="lastname" placeholder="Last Name...">
+              <input rules="max:255" type="text" class="contact-input-field" id="lname-input" name="lastname" placeholder="Last Name...">
             </div>
           </div>
 
@@ -61,7 +61,7 @@
 
           <div id="contact-message-col">
             <label for="contact-message" class="input-labels">How Can I Help?</label>
-            <textarea id="contact-message" name="contact-message" cols="30" rows="10" placeholder="Say hello...write some kind words...this text box is your oyster..."></textarea>
+            <textarea rules="required" id="contact-message" name="contact-message" cols="30" rows="10" placeholder="Say hello...write some kind words...this text box is your oyster..."></textarea>
           </div>
 
           <input id="contact-submit" type="submit" value="Submit">
@@ -88,5 +88,6 @@
     <script src="../js/three.js"></script>
     <script type="module" src="../js/contact.js"></script>
     <script type="module" src="../js/hamburger.js"></script>
+    <script src="https://kwesforms.com/v2/kwes-script.js" defer></script>
   </body>
 </html>
