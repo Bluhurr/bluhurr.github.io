@@ -1,3 +1,8 @@
+/* Honeypot input*/
+#h-input {
+  display: none;
+}
+
 #main-content {
   padding: 2em;
   box-sizing: border-box;
