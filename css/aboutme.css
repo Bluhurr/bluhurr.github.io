@@ -38,6 +38,10 @@
   width: 100%;
   justify-content: center;
   margin-bottom: 3%;
+  background: #fffa;
+  padding-block: 1em;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
 }
 
 .other-skills-row {
@@ -45,7 +49,7 @@
   height: 100%;
   display: flex;
   flex-direction: row;
-  background: #fffc;
+  background: #fff;
   border-radius: 20px;
   box-sizing: border-box;
   padding: 3%;
@@ -70,7 +74,7 @@
 
 .about-page-skills-list {
   width: 30%;
-  background: #fffc;
+  background: #fff;
   border-radius: 20px;
   box-sizing: border-box;
   text-align: center;
@@ -114,7 +118,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  background: #fffc;
+  background: #fff;
   backdrop-filter: blur(20px);
   border-radius: 0px 40px 40px 40px;
   padding: 6%;
@@ -200,6 +204,8 @@
     justify-content: center;
     margin-bottom: 9%;
     align-items: center;
+    background: transparent;
+    backrop-filter: blur(0px);
   }
 
   .about-page-skills-list {
