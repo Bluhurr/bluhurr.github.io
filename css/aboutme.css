@@ -1,23 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+}
+
 #main-content {
+  padding-top: 8vh;
+  min-height: 92vh;
+  justify-content: stretch;
+}
+
+.shadow {
+  box-shadow: 9px 9px 0px rgba(0, 0, 0, 0.2);
 }
 
 .about-me-page-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr;
   width: 100%;
-  overflow: auto;
-  padding: 2%;
-  padding-bottom: 4%;
+  padding: 1em;
+  padding-bottom: 1em;
   box-sizing: border-box;
   align-items: center;
+  flex-grow: 1;
 }
 
-.about-me-info-column {
+.about-me-info-row {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
+  height: 100%;
+  max-width: 1920px;
 }
 
 .skills-column {
@@ -54,7 +71,6 @@
   box-sizing: border-box;
   padding: 3%;
   padding-inline: 4%;
-  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
   justify-content: center;
   backdrop-filter: blur(10px);
 }
@@ -81,7 +97,6 @@
   margin-inline: 2%;
   padding: 2%;
   padding-inline: 3%;
-  box-shadow: 2px 5px 20px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
 }
 
@@ -97,46 +112,62 @@
 }
 
 .about-profile-pic-section {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: start;
-  flex: 2;
   padding-inline: 2%;
+  object-fit: contain;
+  flex-basis: 20%;
 }
 
 #about-me-profile-pic {
-  height: auto;
+  height: 100%;
   width: 100%;
-  border-radius: 10%;
-  background: grey;
-  box-shadow: 2px 2px 10px #0004;
+  border-radius: 0.5em;
+  object-fit: cover;
 }
 
 .about-info-text-section {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background: #fff;
   backdrop-filter: blur(20px);
-  border-radius: 0px 40px 40px 40px;
+  border-radius: 0.5em;
   padding: 6%;
   box-sizing: border-box;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   padding-block: 3%;
   justify-content: center;
   align-items: center;
   flex: 9;
   margin-inline: 2%;
   margin-top: 0.5%;
+  height: 90%;
+  gap: 1em;
 }
 
 .about-info-text-p {
   font-size: 1.1em;
-  color: #046;
-  font-family: "Trebuchet MS", sans-serif;
+  color: #444d51;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   margin: 0px;
+}
+
+.about-info-text-p b {
+  color: #076594;
+}
+
+.hi-text {
+  font-weight: bold;
+  font-size: 1.25em;
+  color: #0b80b0;
+}
+
+.main-about-info-text {
+  color: #444d51;
+  font-weight: bold;
 }
 
 .skills-column > h2 {
@@ -182,7 +213,32 @@
   margin-bottom: 7%;
 }
 
-@media only screen and (max-width: 900px) {
+.about-me-extras-row {
+  display: flex;
+  padding: 2.5em;
+  gap: 5em;
+  width: 100%;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.about-me-extras-column {
+  display: flex;
+  flex-basis: 25em;
+  background: white;
+  border-radius: 0.5em;
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.about-me-extras-column > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1200px) {
+  /*
   .other-skills-row {
     padding-left: 8%;
   }
@@ -194,9 +250,48 @@
   .other-skills-column > li {
     font-size: 1em;
   }
+  */
+
+  #main-content {
+    padding-top: min(4em, 13vh) !important;
+  }
+
+  .about-profile-pic-section {
+    padding-inline: 4em;
+    padding-top: 1em;
+    margin-bottom: 2em;
+  }
+
+  .about-me-info-row {
+    flex-direction: column;
+  }
+
+  .about-me-profile-pic {
+    border-radius: 100em;
+  }
+
+  .about-info-text-section {
+    padding: 2em;
+    flex-direction: column;
+  }
+
+  .about-me-extras-row {
+    flex-direction: column;
+    padding-inline: 0;
+    gap: 2em;
+  }
+
+  .about-me-extras-column > img {
+    
+  }
+
+  #footer {
+    height: 13vh;
+  }
 }
 
 @media only screen and (max-width: 600px) {
+  /*
   .skills-row {
     display: flex;
     flex-direction: column;
@@ -316,4 +411,5 @@
     font-size: 1.4em;
     margin-inline: 7%;
   }
+  */
 }

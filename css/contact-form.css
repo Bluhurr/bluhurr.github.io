@@ -1,0 +1,261 @@
+/* Honeypot input*/
+#h-input {
+  display: none;
+}
+
+#form-container {
+  width: 80%;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff7;
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: bold;
+  font-size: 2vmin;
+  max-width: 50vw;
+  padding: 1.5em;
+  margin-bottom: 3em;
+  margin-inline: 2em;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-input-field {
+  padding: 0.75em;
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  border: solid 2px transparent;
+  box-shadow: 0px 5px 0px rgb(0 0 0 / 20%);
+  width: 100%;
+  font-size: 1.5vmin;
+}
+
+#contact-first-last {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+}
+
+.name-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+#fname-col {
+  padding-right: 2.5%;
+}
+
+#lname-col {
+  padding-left: 2.5%;
+}
+
+#email-row {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  justify-content: center;
+  margin-top: 3%;
+  box-sizing: border-box;
+}
+
+#email-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#fname-label {
+}
+
+#lname-label {
+}
+
+#email-label {
+}
+
+#fname-input {
+}
+
+#lname-input {
+}
+
+#email-input {
+  padding: 0.75em;
+}
+
+#contact-message {
+  height: 10em;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  box-sizing: border-box;
+  border-radius: 0.25em;
+  border: solid 2px transparent;
+  font-family: "Trebuchet MS", sans-serif;
+  resize: vertical;
+  font-size: 1.5vmin;
+  box-shadow: 0px 5px 0px rgb(0 0 0 / 20%);
+}
+
+#contact-message:focus, #contact-message:focus-visible {
+  outline: solid 0.2em var(--mid-blue);
+}
+
+#contact-submit {
+  border: none;
+  border-radius: 10px;
+  padding: 1.5%;
+  padding-inline: 4%;
+  box-sizing: border-box;
+  margin-top: 2em;
+  cursor: pointer;
+  font-size: 1.5vmin;
+}
+
+#contact-submit:focus, #contact-submit:focus-visible {
+  outline: solid 0.2em var(--mid-blue);
+}
+
+#contact-message-col {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  flex: 0.5;
+}
+
+.contact-input-field:focus, .contact-input-field:focus-visible {
+  outline: solid 0.2em var(--mid-blue);
+}
+
+.input-labels {
+  margin-bottom: 1%;
+  color: #046;
+  font-family: "Trebuchet MS", sans-serif;
+  margin-left: 1em;
+}
+
+@media only screen and (max-width: 900px) {
+  #main-content {
+    padding: 1em;
+    padding-top: 5vh;
+    box-sizing: border-box;
+    padding-bottom: 1em;
+    justify-content: flex-start;
+  }
+
+  #contact-first-last {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #fname-col {
+    padding-right: 0%;
+  }
+
+  #lname-col {
+    padding-left: 0%;
+  }
+
+  #email-row {
+    margin-top: 0%;
+    flex: 0.2;
+    width: 90%;
+  }
+
+  .contact-input-field {
+    padding: 0.75em;
+    font-size: 1em;
+  }
+
+  #email-input {
+    padding: 0.75em;
+  } 
+
+  #contact-message-col {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    flex: 0.2;
+    height: 20%;
+  }
+
+  #contact-message {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: solid 2px transparent;
+    height: 9em;
+    font-size: 1em;
+  }
+
+  #contact-submit {
+    border: none;
+    border-radius: 10px;
+    padding: 3%;
+    padding-inline: 10%;
+    box-sizing: border-box;
+    margin-top: 1em;
+    cursor: pointer;
+    background: white;
+    font-size: 1em;
+  }
+
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #form-container {
+    width: 100%;
+    padding-block: 5%;
+    max-width: unset;
+    padding-inline: 2%;
+    flex: 0;
+    font-size: 1em;
+  }
+
+  .name-col {
+    margin-bottom: 5%;
+  }
+
+  #contact-first-last {
+    flex: 0.1;
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1600px) {
+  #form-container {
+    max-width: 90vmin;
+    width: 100%;
+  }
+}

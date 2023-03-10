@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Greg Lawrence - Web Developer</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/contact-form.css">
     <script src="https://kit.fontawesome.com/a24d64ca4b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Montserrat:wght@300;400;500;800&display=swap" rel="stylesheet">
   </head>
   <body>
-    <canvas id="three-icons-canvas-container"></canvas>
-    <div id="navbar" class="nav-transparent">
+    <div id="navbar" class="">
       <ul class="nav-ul">
         <li id="logo-link"><a href='./'>&lt;Greg <span class="sky-blue-text">Lawrence</span> /&gt;</a></li>
+        <li class="nav-link"><a href='pages/services.html'>// Skills & Services</a></li>
         <li class="nav-link"><a href='pages/portfolio.html'>// Portfolio</a></li>
         <li class="nav-link"><a href='pages/aboutme.html'>// About Me</a></li>
         <li class="nav-link"><a href='pages/contact.html'>// Say Hi!</a></li>
@@ -27,6 +31,7 @@
       <ul class="mobile-nav-ul">
         <li id="logo-link"><a href='./'>&lt;Greg <span class="sky-blue-text">Lawrence</span> /&gt;</a></li>
         <div class="mobile-nav-link-container">
+          <li class="nav-link"><a href='pages/services.html'>// Skills & Services</a></li>
           <li class="nav-link"><a href='pages/portfolio.html'>// Portfolio</a></li>
           <li class="nav-link"><a href='pages/aboutme.html'>// About Me</a></li>
           <li class="nav-link"><a href='pages/contact.html'>// Say Hi!</a></li>
@@ -34,50 +39,45 @@
       </ul>
     </div>
     <div id="main-content">
-      <div id="bg-image"></div>
 
       <div id="threejs-container">
-        <div id="threejs"></div>
-        <div id="main-arrow" class="circle-arrow">
-            <i id="home-page-down-arrow" class="fa-solid fa-arrow-down"></i>
+        <canvas id="threejs"></canvas>
+        <div id="hero-headline">
+          <h1 id="main-headline">Elevate your Web Design and Create <span class="fancy">Memorable</span> Online Experiences.</h1>
         </div>
+      </div>
+
+      <div id="main-arrow" class="circle-arrow">
+        <i id="home-page-down-arrow" class="fa-solid fa-arrow-down"></i>
       </div>
 
       <div id="home-about-content">
         <div id="home-about-col">
 
           <div id="abit-about-me-row">
-            <h2 class="about-me-header">A bit about me...</h2>
+            <h2 class="about-me-header">A bit of what I do...</h2>
           </div>
           
-          <div id="about-and-skills">
-            <div id="about-text-section">
-              <i id="about-icon" class="fa-solid fa-face-laugh-beam"></i>
-              <p class="about-me-p">Greetings weary internet traveler! My name is Greg Lawrence, 
-              and as you've <i>probably</i> already figured out 
-              I am among many other things, a 
-              <b>web developer</b>.</p>
-
-              <p class="about-me-p">Apart from web development 
-              I enjoy many other activities such as <br> 
-              hiking, mountain biking, cars, music production, and 
-              plenty more. <br><br> The very astute of you <i>may</i> have also noticed my favorite
-              color happens to be <b>blue</b>.</p>
-
-              <p class="about-me-p">I have always loved learning
-              new skills of all types, but that has of course also
-              spilled over into my programming career as well.</p> 
-
-              <p class="about-me-p">Whether it be learning
-              simple concepts such as <b>new CSS styling techniques</b>, learning JavaScript
-              libraries such as <b>React.js</b> and <b>Three.js</b>, or even learning new <b>Vim keybindings</b>
-              I have always sought out the unique and interesting in life, allowing me to in turn create equally unique websites and web applications.</p>
+          <section id="what-i-do-section">
+            <div class="what-i-do-col">
+              <div class="skill" id="wordpress-skill"><h3>Wordpress Website Creation</h3></div>
+              <div class="skill" id="threejs-skill"><h3>Three.js/3D Web Experiences</h3></div>
+              <div class="skill" id="static-site-skill"><h3>Static Websites & Landing Pages</h3></div>
+              <div class="fun-blurb"><h4 class="no-class">All while keeping things fun.</h4></div>
+              <div class="testimonials-row">
+                <div class="testimonial"><p>Greg's great. Did goob website. tums up.</p><p>- Scitaute Podiatry</p></div>
+                <div class="testimonial"><p>Greg's great. Did goob website. tums up.</p><p>- Scitaute Podiatry</p></div>
+                <div class="testimonial"><p>Greg's great. Did goob website. tums up.</p><p>- Scitaute Podiatry</p></div>
+              </div>
             </div>
-            <div id="skills-section">
-              <ul id="skills-list">
-              </ul>
+
+            <div class="what-i-do-col">
+              <div id="home-image-container">
+                <img id="home-image" src="./images/Greg-Website-AboutPhoto_cropped.JPG" alt="Personality image">
+                <h4 class="mobile-fun-blurb">And I of course try to have a bit of fun in all that I do.</h4>
+              </div>
             </div>
-          </div>
+          </section>
 
         </div>
       </div>
@@ -85,17 +85,50 @@
     
     <div id="bottom-page-shadow"></div>
 
+
     <div id="three-icons-section">
-      <a href='pages/portfolio.html' id="portfolio-3d-icon-col" class="three-icon-col">
-        <h2>Portfolio</h2>
-      </a>
-      <a href='pages/aboutme.html' id="about-3d-icon-col" class="three-icon-col">
-        <h2>About Me</h2>
-      </a>
-      <a href='pages/contact.html' id="contact-3d-icon-col" class="three-icon-col">
-        <h2>Say Hi!</h2>
-      </a>
+      <div id="other-pages-row">
+        <a class="other-page-link" href='pages/services.html'>Skills &<br>Services</a>
+        <a class="other-page-link" href='pages/portfolio.html'>Portfolio</a>
+        <a class="other-page-link" href='pages/aboutme.html'>About Me</a>
+      </div>
+      <h3 id="contact-header">Get in Touch</h3>
+
+      <div id="form-container">
+        <form id="contact-form"action="https://formkeep.com/f/32baf7e68e0f" accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
+          <div id="contact-first-last">
+            <div id="fname-col" class="name-col">
+              <label id="fname-label" class="input-labels" for="fname" rules="required|max:255">First Name</label>
+              <input rules="max:255" type="text" class="contact-input-field" id="fname-input" name="firstname" placeholder="First Name...">
+            </div>
+
+            <div id="lname-col" class="name-col">
+              <label id="lname-label" class="input-labels" for="lname">Last Name</label>
+              <input rules="max:255" type="text" class="contact-input-field" id="lname-input" name="lastname" placeholder="Last Name...">
+            </div>
+          </div>
+
+          <input id="h-input" type="text" name="subscribe_32baf7e68e0f_39628">
+
+          <div id="email-row">
+            <div id="email-col">
+              <label id="email-label" class="input-labels" for="email">Email</label>
+              <input type="text" class="contact-input-field" id="email-input" name="email" placeholder="Email...">
+            </div>
+          </div>
+
+          <div id="contact-message-col">
+            <label for="contact-message" class="input-labels">How Can I Help?</label>
+            <textarea rules="required" id="contact-message" name="contact-message" cols="30" rows="10" placeholder="Say hello...write some kind words...this text box is your oyster..."></textarea>
+          </div>
+
+          <input id="contact-submit" type="submit" value="Submit">
+        </form>
+      </div>
+
+      <div id="threejs-2"></div>
     </div>
+
     <div id="footer">
       <div class="left-footer-col"><i class="fa-solid fa-code"></i></div>
       <div class="left-footer-col">
@@ -112,7 +145,6 @@
     <script src="js/GLTFLoader.js"></script>
     <script src="js/home.js"></script>
     <script src="js/hamburger.js"></script>
-    <script type="module" src="js/home-three.js"></script>
-    <script type="module" src="js/3dIcons.js"></script>
+    <script type="module" src="new-js/home-three.js"></script>
   </body>
 </html>

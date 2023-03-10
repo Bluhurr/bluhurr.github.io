@@ -67,11 +67,20 @@ function loadScene1() {
   minSceneSetup(); 
   addLighting();
   scene.add(torusKnot(2.5, 0.5, 5, 6));
+
+  const planeGeo = new THREE.PlaneGeometry(100, 100);
+  const material = new THREE.MeshStandardMaterial({ color: 0x16d9f3 });
+
+  const plane = new THREE.Mesh(planeGeo, material);
+  plane.receiveShadow = true;
+  plane.rotation.x = 180;
+  scene.add(plane);
+
   camera.position.z = z;
   camera.position.y = y;
   controls = new THREE.OrbitControls(camera, renderer.domElement)
   controls.target = new THREE.Vector3(objects[0].position.x, objects[0].position.y-0.5, objects[0].position.z)
-  controls.autoRotate = true;
+  controls.autoRotate = false;
   controls.enableZoom = false;
   controls.enablePan = false;
   controls.enableDamping = true;
@@ -214,6 +223,7 @@ function torusKnot(size, thickness, twists1, twists2) {
   material.metalness = 0;
   material.color = new THREE.Color(0xffffff);
   const tKnot = new THREE.Mesh( geometry, material );
+  tKnot.castShadow = true;
   objects.push(tKnot);
 
   return tKnot;

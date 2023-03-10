@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/aboutme.css">
     <script src="https://kit.fontawesome.com/a24d64ca4b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Montserrat:wght@300;400;500;600;800&display=swap" rel="stylesheet">
   </head>
   <body>
     <!-- Nav -->
     <div id="navbar" class="nav-transparent">
       <ul class="nav-ul">
         <li id="logo-link"><a href='../'>&lt;Greg <span class="sky-blue-text">Lawrence</span> /&gt;</a></li>
+        <li class="nav-link"><a href='services.html'>// Skills & Services</a></li>
         <li class="nav-link"><a href='portfolio.html'>// Portfolio</a></li>
         <li class="nav-link"><a href='aboutme.html'>// About Me</a></li>
         <li class="nav-link"><a href='contact.html'>// Say Hi!</a></li>
@@ -28,6 +31,7 @@
       <ul class="mobile-nav-ul">
         <li id="logo-link"><a href='../'>&lt;Greg <span class="sky-blue-text">Lawrence</span> /&gt;</a></li>
         <div class="mobile-nav-link-container">
+          <li class="nav-link"><a href='services.html'>// Skills & Services</a></li>
           <li class="nav-link"><a href='portfolio.html'>// Portfolio</a></li>
           <li class="nav-link"><a href='aboutme.html'>// About Me</a></li>
           <li class="nav-link"><a href='contact.html'>// Say Hi!</a></li>
@@ -37,80 +41,22 @@
 
     <!-- Main Page Content -->
     <div id="main-content">
-      <div id="bg-image"></div>
       <div class="about-me-page-container">
-        <div class="about-me-info-column">
+        <div class="about-me-info-row">
           <div class="about-profile-pic-section">
-            <img id="about-me-profile-pic" src="../images/greg-profile-pic.jpg" alt="About Me Profile Pic">
+            <img id="about-me-profile-pic" class="shadow" src="../images/greg-profile-pic.jpg" alt="About Me Profile Pic">
           </div>
-          <div class="about-info-text-section">
-            <p class="about-info-text-p">
-              Here you'll find the part where I talk about myself and my random interests.
-              <br><br>
-              Apart from web development 
-              I've always enjoyed a wide array of different activities and interests, such as <b>coffee</b>, <b>hiking</b>, <b>skateboarding</b>,
-              old and <b>unique cars</b>, <b>music production</b>, and pretty much any novel and interesting hobby I can get my hands on.
-              <br><br>
-              In general I have always enjoyed <b>working with computers</b>, especially toying with different <b>Linux</b> distros 
-              Recently, my main focus has been <b>learning Vim</b>, a powerful and highly customizable terminal based text
-              editor. As with most Vim enthusiasts, I get excited in the discovery of <b>new Vim commands</b> that reduce
-              my keystrokes by a whopping 2 or 3!
-              <br><br>
-              In web development I have always thrived in situations where I get to apply my <b>creativity</b> and <b>love for creating
-                visually pleasing</b> and <b>user friendly designs.</b>
-            </p>
+          <div class="about-info-text-section shadow">
+            <p class="main-about-info-text about-info-text-p"><span class="hi-text">Hello there!</span> My name is <b>Greg</b> and I am a Boston area local <b>web designer & developer.</b> With a BS in Computer Science, I've certainly dabbled in <b>all types of programming</b>, but have always been drawn back to the web. I specifically love being able to bring in my creativity and create online experiences that are unique and create intrigue for users.</p>
+            <p class="about-info-text-p">Apart from trying to create <b>novel 3D experiences</b> and <b>gamified web interactions</b>, I also find plenty of other hobbies and interests to fill my time. I especially enjoy the <b>gym/powerlifting</b>, <b>hiking</b> in the New Hampshire White Mountains, pretty much <b>all things computers</b> (of course including my fair share of <b>video games</b>), and even <b>music production.</b></p>
+            <p class="about-info-text-p">I always try to bring a bit (or a lot) of <b>fun</b> and <b>playfulness</b> into my work, because if we can't find fun in the things we do, then <b>why are we doing them in the first place?</b></p>
           </div>
         </div>
-        <div class="skills-column">
 
-          <h2>Technologies I Work With on the Daily</h2>
-          <div class="skills-row">
-            <ul class="about-page-skills-list">
-              <h3>Web<br> Development</h3>
-              <hr>
-              <li> JavaScript</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Three.js</li>
-              <li>JSON</li>
-            </ul>
-            <ul class="about-page-skills-list">
-              <h3>General<br> Languages & Tools</h3>
-              <hr>
-              <li>Python</li>
-              <li>Linux</li>
-              <li>Vim</li>
-              <li>Git</li>
-              <li>WSL</li>
-            </ul>
-            <ul class="about-page-skills-list">
-              <h3>Game<br> Development</h3>
-              <hr>
-              <li>PlayCanvas</li>
-              <li>Unity3D</li>
-              <li>Blender</li>
-            </ul>
-          </div>
-         
-          <h2 id="other-skills-header">Technologies I'm Still Learning<span id="small-other-skills-header">(or that need some brushing up on)<span></h2>
-          <div class="other-skills-row">
-            <ul class="other-skills-column">
-              <li>React.js</li>
-              <li>Node.js</li>
-              <li>Webpack</li>
-            </ul>
-            <ul class="other-skills-column">
-              <li>PHP</li>
-              <li>C++</li>
-              <li>Java</li>
-            </ul>
-            <ul class="other-skills-column">
-              <li>SQL</li>
-              <li>Vue.js</li>
-              <li>C#</li>
-            </ul>
-          </div>
-        
+        <div class="about-me-extras-row">
+          <div class="about-me-extras-column shadow"><img src="../images/about-me-photo-1.jpg" alt=""></div>
+          <div class="about-me-extras-column shadow"><img src="../images/about-me-photo-2.jpg" alt=""></div>
+          <div class="about-me-extras-column shadow"><img src="../images/about-me-photo-3.jpg" alt=""></div>
         </div>
       </div>
     </div>
