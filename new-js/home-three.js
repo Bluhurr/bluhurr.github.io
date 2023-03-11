@@ -84,7 +84,7 @@ function onContainerResize() {
   camera.updateProjectionMatrix();
 
   renderer.setSize(container.clientWidth, container.clientHeight);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 0.8));
 
   if(sizes.width <= 915 && sizes.width <= sizes.height){
     // Point camera directly at box
@@ -131,7 +131,7 @@ function minSceneSetup() {
   renderer.setClearColor( 0x147AC5, 1 );
   renderer.shadowMap.enabled = true;
   renderer.setSize( box.width, box.height );
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 0.8));
   // controls = new THREE.OrbitControls(camera, renderer.domElement);
   // document.getElementById('threejs').appendChild( renderer.domElement );
 }

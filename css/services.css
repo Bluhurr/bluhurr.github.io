@@ -99,8 +99,9 @@
   display: flex;
   padding-block: 1em;
   padding-top: 3em;
-  flex-grow: 1;
   justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .service-column {
