@@ -37,11 +37,10 @@ function elementInViewport(el, offset) {
   );
 }
 
-
 // Make sure elements that are in the viewport are animated in if refreshed -----
 for(var i = 0; i < skillBars.length; i++){
   if(elementInViewport(skillBars.item(i), 100)) {
-    skillBars.item(i).firstChild.classList.add('slide-in');
+    skillBars.item(i).firstChild.firstChild.classList.add('slide-in');
   }else {
   }
 }
@@ -50,8 +49,6 @@ if(elementInViewport(funBlurb.item(0), 100)){
   funBlurb.item(0).firstChild.classList.add('fun-blurb-visible');
 }else {
 }
-
-console.log(testimonials);
 
 for(const child of testimonials.children){
   if(elementInViewport(child, 100)){
@@ -94,7 +91,7 @@ window.onscroll = () => {
 
   for(var i = 0; i < skillBars.length; i++){
     if(elementInViewport(skillBars.item(i), 50)) {
-      skillBars.item(i).firstChild.classList.add('slide-in');
+      skillBars.item(i).firstChild.firstChild.classList.add('slide-in');
     }else {
     }
   }

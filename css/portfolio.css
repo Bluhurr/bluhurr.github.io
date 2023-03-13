@@ -1,3 +1,7 @@
+body {
+  height: unset;
+}
+
 #test {
   height: 140vh;
   width: 100%;
